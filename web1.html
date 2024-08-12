@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Cyber</a>
+            <div class="hamburger-menu" id="hamburger-menu">☰</div>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">My Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <!-- Contact Me button -->
+            <a href="https://www.linkedin.com/search/results/all/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAAFB58KUBXqD6t8X9MTapP03fR-JKN64yql4&keywords=Mokhirbek%20Abdujabbarov&origin=ENTITY_SEARCH_HOME_HISTORY&sid=ww5" class="contact-btn" target="_blank">Contact Me</a>
+        </nav>
+        <div class="header-content animate-on-scroll">
+            <h1><span class="highlight">Securing the <span class="raqamli">digital World</span> with </span> 🔥 Passion and <span class="highdark">Precision</span></h1>
+            <p>Hello and welcome to my website! I’m thrilled to showcase my commitment to securing digital landscapes with advanced and effective cybersecurity solutions.</p>
+            <div class="buttons">
+                <a href="#" class="btn">Let's Talk</a>
+                <a href="#" class="btn">Download CV</a>
+            </div>
+            <img src="profile1.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mohirbek_stories/" target="_blank"><img src="./Instagram (2).png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/mohirbek-abdujabbarov/" target="_blank"><img src="./Linkedin (copy).png" alt="LinkedIn" class="linkedin"></a>
+                <a href="mailto:abdujabbarovmokhirbek@gmail.com"><img src="./Email-2.png" alt="Email" class="email"></a>
+                <a href="tel:+998901191900"><img src="./Phone call.png" alt="Phone Call"></a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="about" class="animate-on-scroll">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>👋 Hello, I'm Mohirbek, a seasoned cybersecurity expert dedicated to fortifying organizational security. My expertise lies in conducting penetration testing, crafting comprehensive cybersecurity strategies, and implementing cutting-edge security measures. My objective is to safeguard your company against cyber threats and elevate its overall security posture.</p>
+        </div>
+    </section>
+
+    <section id="skills" class="animate-on-scroll">
+        <div class="skills-content">
+            <h2>My Skills ⚡️</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Penetration Testing</h3>
+                    <p>Nmap, Metasploit Framework, Nessus, John the Ripper, Nikto, Hydra</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Network Security</h3>
+                    <p>Wireshark, Nmap, Nessus, Aircrack-ng</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Security Policy Development</h3>
+                    <p>Security standards, Technical Knowledge, Incident Response and Management</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Vulnerability Management</h3>
+                    <p>Nmap, Metasploit Framework, Burp Suite, Social Engineering Toolkit, OpenVAS</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Web-application Security</h3>
+                    <p>SQLmap, XSSer, XSStrike, Nikto, Burp Suite</p>
+                </div>
+                <div class="skill-card">
+                    <h3>System Administration and Security</h3>
+                    <p>Linux, Windows, RAT, OSSEC, Defender</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Ethical Hacking</h3>
+                    <p>Metasploit Framework, Aircrack-ng, John the Ripper, Nmap</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend Development</h3>
+                    <p>Python script, Bash script, Assembly, Assembly fasm</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Front-End Development</h3>
+                    <p>Vue.js, HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="attak animate-on-scroll">
+        <div class="attak-content">
+            <div class="attak-insedent">
+                <h1>Every hour</h1>
+            </div>
+            <div class="attak-about">
+                <p>Organizations incur significant losses due to attacks by malicious actors, unscrupulous employees, and other unmitigated cyber risks. Research indicates that an average of 1.7 million cyberattacks are recorded daily. A single such attack can result in colossal financial and reputational damage to a business.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="main-text">LET'S W<img src="./profile1.jpg" alt="Profile Picture" class="profile-pic">RK</div>
+            <div class="sub-text">TOGETHER</div>
+            <!-- Contact Me button in footer -->
+            <a href="https://www.linkedin.com/in/mohirbek-abdujabbarov/" class="contact-btn" target="_blank">Contact Me</a>
+        </div>
+    </footer>
+
+    <script>
+        // Function to add a class when an element is in view
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        }
+
+        // Call the function when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+
+        document.getElementById('hamburger-menu').addEventListener('click', function() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
